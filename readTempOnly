@@ -1,0 +1,15 @@
+#!/bin/bash
+
+secs=10
+endtime=$(( $(date +%s) + secs ))
+
+fileout=$1
+
+while [ $(date +%s) -lt $endtime ]
+do
+
+    cat /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp* >> "$fileout"
+    sleep 0.002
+done 
+
+
