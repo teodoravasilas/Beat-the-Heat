@@ -1,0 +1,16 @@
+#!/bin/bash
+
+secs=7300 
+endtime=$(( $(date +%s) + secs ))
+
+fileout=$1
+
+while [ $(date +%s) -lt $endtime ]
+do
+
+    mv /home/ie311/Claudiu/advanced/files-to-be-moved.zip /home/ie311/Claudiu/advanced/results/files-to-be-moved.zip
+
+    mv /home/ie311/Claudiu/advanced/results/files-to-be-moved.zip /home/ie311/Claudiu/advanced/files-to-be-moved.zip
+    
+done
+

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+secs=7300 
+endtime=$(( $(date +%s) + secs ))
+
+
+while [ $(date +%s) -lt $endtime ]
+do
+
+	xdotool type --delay 100 "Simulating keystrokes in a shell script can be achieved using the xdotool utility in Linux. xdotool allows you to script mouse and keyboard input events. First, you need to install xdotool if you haven't already. You can usually install it via your package manager. For example, on Ubuntu or Debian-based systems, you can install it using: bash Copy code sudo apt-get install xdotool Once installed, you can use xdotool to simulate keystrokes. Here's a basic example: bash Copy code Save this script in a file (e.g., simulate_typing.sh), make it executable using chmod +x simulate_typing.sh, and then run it with . simulate_typing.sh. This will simulate typing with a delay of 0.1 seconds between each keystroke. You can adjust the delay according to your requirements."
+ 
+sleep 0.5
+
+done
+
+

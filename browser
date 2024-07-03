@@ -1,0 +1,35 @@
+#!/bin/bash
+
+secs=7300 
+endtime=$(( $(date +%s) + secs ))
+
+fileout=$1
+
+while [ $(date +%s) -lt $endtime ]
+do
+
+firefox www.google.com &
+sleep 1s
+
+firefox www.maps.google.com &
+sleep 1s
+
+firefox https://stackoverflow.com/ &
+sleep 1s
+
+firefox https://ubuntu.com/ &
+sleep 1s
+
+firefox https://www.geeksforgeeks.org/ &
+sleep 1s
+
+firefox https://ro.wikipedia.org/wiki/Pagina_principal%C4%83 &
+sleep 1s
+
+firefox https://www.ieee.org/ &
+sleep 1s  
+
+pkill firefox
+
+done
+
